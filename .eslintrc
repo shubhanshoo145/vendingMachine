@@ -1,0 +1,36 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb-typescript"
+  ],
+
+  "rules": {
+    "eol-last": "off",
+    "no-underscore-dangle": "off",
+    "func-names": ["error", "never"],
+    "no-param-reassign": ["error", { "props": false }],
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "consistent-return": "off",
+    "no-shadow": "off",
+    "dot-notation": "off",
+    "object-shorthand": "off",
+    "@typescript-eslint/no-await-in-loop": "off",
+    "@typescript-eslint/object-literal-sort-keys": 1,
+    "@typescript-eslint/align": false,
+    "@typescript-eslint/no-trailing-whitespace": [true, "ignore-blank-lines"],
+    "@typescript-eslint/object-literal-shorthand": false
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "rootRequire": true,
+    "logger": true,
+    "backendEvents": true
+  }
+}

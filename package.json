@@ -1,0 +1,44 @@
+{
+  "name": "axioned-project",
+  "version": "2.0.0",
+  "description": "Get product price and select or reject a product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/typescript/bin/tsc --outDir ./dist",
+    "build-jenkins": "./node_modules/typescript/bin/tsc --outDir ./dist"
+  },
+  "keywords": [],
+  "author": "Shubhanshoo Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "inversify": "^5.0.1",
+    "logform": "^2.1.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.10.15",
+    "morgan": "^1.9.1",
+    "reflect-metadata": "^0.1.13",
+    "winston": "^3.2.1",
+    "winston-transport": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.36",
+    "@types/express": "^4.17.3",
+    "@types/inversify": "^2.0.33",
+    "@types/mongodb": "^3.5.2",
+    "@types/mongoose": "^5.7.6",
+    "@types/node": "^13.9.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-plugin-import": "^2.20.1",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3"
+  }
+}

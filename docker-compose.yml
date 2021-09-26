@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  mongo:
+    image: 'mongo:3.4.10'
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./docker/mongo-volume:/Users/Shubhanshoo Agarwal/data/db
+      # the path needs to be changed to '/Users/<user>/data/db' in case of windows system
+      # in case of linux based systems, this will be '/data/db'
+  backend:
+    build: ./
+    user: 'node'
+    working_dir: /home/node/app
+    depends_on:
+       - mongo
+    volumes:
+      - ./:/home/node/app/:cached
+    ports:
+      - '4703:4703'
+      - '9055:9055'
+    command: bash -c "printf 'Installing npm...\n' && npm prune && npm install && node_modules/tsc-watch/index.js --onSuccess 'node --inspect=0.0.0.0:9055 dist/index.js' --compiler typescript/bin/tsc"
