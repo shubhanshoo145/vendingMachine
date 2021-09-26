@@ -9,7 +9,7 @@ In order to launch the application for the first time, please execute the follow
 
 ## Usage
 
-The APIs are provided below
+The APIs are provided below.
 First need to create all the products that are supported by the vending machine
 
 #### Product Creation API
